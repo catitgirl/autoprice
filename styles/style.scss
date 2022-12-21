@@ -33,11 +33,17 @@ body {
     background-size: cover;
     box-sizing: border-box;
 }
-
+.stilization {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $var1;
+    opacity: 0.6;
+  }
 .container {
     max-width: 1200px;
     width: 100%;
-    height: 650px;
+    height: 750px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -191,5 +197,23 @@ body {
             transform: translate(-50%, -50%);
             background-color: $var8;
         }
+
     }
+    
+}
+
+div#result {
+    background-color: #D6E7ED;
+    width: 350px;
+    height: 350px;
+    padding-top: 10px;
+    img {
+       width: 100%;
+        
+    }
+    
+}
+select#color {
+    font-size: 20px;
+    color: $var2;
 }

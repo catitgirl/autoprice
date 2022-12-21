@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div class="stilization"></div>
     <div class="container">
         <form action="#" class="form form1">
             <div class="form__item">
@@ -65,7 +66,17 @@
                 </div>
             </div>
         </form>
+        
         <form action="#" class="form form2">
+            <select name="color" id="color" onchange="showColor()">
+                <option disabled selected = "selected">Выберите цвет Вашего авто</option>
+                <option value="black">Черный</option>
+                <option value="white">Белый</option>
+                <option value="silver">Серебристый</option>
+            </select>
+            <div id="result">
+                <img src="" id="carImage">
+            </div>
             <div class="form__item">
                 <h2 class="heading">Итоговая цена</h2>
                 <div class="order">
@@ -85,6 +96,7 @@
                 <h2 class="heading">Итоговая стоимость автомобиля</h2>
                 <output class="total" id="total">0</output>
             </div>
+            
         </form>
     </div>
     <script src="./js/main.js"></script>
