@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$var1: #D6E7ED;
+$var2: #0B1172;
+$var3: #111111;
+$var4: #5F999B;
+$var5: #ffffff;
+$var6: #3073E6;
+$var7: #1354E6;
+$var8: #0c76ee;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    width: 100%;
+    min-height: 100vh;
+    color: $var1;
+    position: relative;
+    background-image: url(/assets/images/range-rover-velar2021.jpeg);
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    background-color: $var1;
+    border-radius: 25px;
+    padding: 30px;
+    color: $var3;
+
+    &1 {
+        flex-basis: 650px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin-right: 50px;
+    }
+
+    &2 {
+        flex-shrink: 1;
+        flex-grow: 1;
+
+        .order {
+            margin-bottom: 15px;
+
+            output {
+                margin-left: 10px;
+                font-size: 18px;
+            }
+        }
+
+        .total {
+            font-size: 40px;
+            font-weight: 400;
+            color: $var6;
+            position: relative;
+
+            &::after {
+                content: "";
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .form__item {
+        margin-bottom: 40px;
+    }
+
+    .heading {
+        margin-bottom: 30px;
+        font-size: 18px;
+        color: $var3;
+    }
+}
+
+.switcher {
+    display: flex;
+    list-style-type: none;
+
+    &__item input {
+        display: none;
+
+        &:checked+label {
+            background-color: $var4;
+            color: $var6;
+        }
+    }
+
+    &__item label {
+        display: inline-block;
+        padding: 20px 30px;
+        width: 200px;
+        font-size: 18px;
+        color: $var3;
+        border: 2px solid $var4;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(245, 186, 16, 0.15);
+        }
+
+        &:not(:first-child) {
+            margin-left: -2px;
+        }
+    }
+}
+
+#time {
+    width: 500px;
+    height: 10px;
+    background-color: $var5;
+    border-radius: 20px;
+    outline: none;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 25px;
+        height: 25px;
+        background-color: $var7;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+}
+
+#volume {
+    font-size: 48px;
+    margin-left: 30px;
+    color: $var6;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+}
+
+.option__item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+    input {
+        display: none;
+
+        &:checked+.checkmark::after {
+            display: block;
+        }
+    }
+
+    .checkmark {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: $var5;
+        margin-right: 15px;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            display: none;
+            position: absolute;
+            content: "";
+            width: 18px;
+            height: 18px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $var8;
+        }
+    }
+}
