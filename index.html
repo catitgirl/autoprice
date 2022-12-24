@@ -35,6 +35,7 @@
             </div>
             <div class="form__item">
                 <h2 class="heading">Количество шариков к оформлению</h2>
+                <p>*1 шарик=1 руб.</p>
                 <div class="slider">
                     <input type="range" name="baloons" id="baloons" step="1" min="0" max="96" value="1" />
                     <output id="volume" for="baloons">0</output>
@@ -66,10 +67,10 @@
                 </div>
             </div>
         </form>
-        
+
         <form action="#" class="form form2">
             <select name="color" id="color" onchange="showColor()">
-                <option disabled selected = "selected">Выберите цвет Вашего авто</option>
+                <option disabled selected="selected">Выберите цвет Вашего авто</option>
                 <option value="black">Черный</option>
                 <option value="white">Белый</option>
                 <option value="silver">Серебристый</option>
@@ -96,7 +97,7 @@
                 <h2 class="heading">Итоговая стоимость автомобиля</h2>
                 <output class="total" id="total">0</output>
             </div>
-            
+
         </form>
     </div>
     <script src="./js/main.js"></script>
