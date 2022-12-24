@@ -114,14 +114,14 @@ body {
   margin-left: -2px;
 }
 
-#time {
+#baloons {
   width: 500px;
   height: 10px;
   background-color: #ffffff;
   border-radius: 20px;
   outline: none;
 }
-#time::-webkit-slider-thumb {
+#baloons::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 25px;
   height: 25px;
